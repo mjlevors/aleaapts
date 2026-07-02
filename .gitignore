@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# raw WordPress scrape backup, kept locally as reference only
+.wp-html-dump-backup/
