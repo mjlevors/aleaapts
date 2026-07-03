@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { GoogleAnalytics } from '@digi4care/astro-google-analytics';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 
@@ -46,7 +45,13 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
 
-	<GoogleAnalytics id="G-ZYVCXMV4ZN" />
+	<script type="text/partytown" is:inline src="https://www.googletagmanager.com/gtag/js?id=G-ZYVCXMV4ZN"></script>
+	<script type="text/partytown" is:inline>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-ZYVCXMV4ZN');
+	</script>
 </head>
 <body>
 	<SiteHeader />

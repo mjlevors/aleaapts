@@ -12,7 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@digi4care/astro-google-analytics": "^2.0.1",
+    "@astrojs/partytown": "^2.1.7",
     "astro": "^7.0.5"
   }
 }
