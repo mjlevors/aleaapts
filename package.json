@@ -9,15 +9,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "cms": "tinacms dev -c \"astro dev\""
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.7",
     "astro": "^7.0.5"
-  },
-  "devDependencies": {
-    "@tinacms/cli": "^2.5.3",
-    "tinacms": "^3.10.0"
   }
 }
