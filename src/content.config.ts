@@ -15,7 +15,11 @@ const home = defineCollection({
 		ctaLabel: z.string(),
 		ctaUrl: z.string(),
 		officeHeading: z.string(),
-		officeLines: z.array(z.string()),
+		officeName: z.string(),
+		officeAddress: z.string(),
+		officeMapUrl: z.string(),
+		officePhoneLabel: z.string(),
+		officePhoneNumber: z.string(),
 	}),
 });
 

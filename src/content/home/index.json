@@ -9,9 +9,9 @@
   "ctaLabel": "Go to Apartments.com",
   "ctaUrl": "https://www.apartments.com/a-lea-apartments-albert-lea-mn/rlv7f10/",
   "officeHeading": "Office",
-  "officeLines": [
-    "Albert Lea Apartments",
-    "909 Janson Street Albert Lea, Mn 56007",
-    "Manager Phone: 763-843-0629"
-  ]
+  "officeName": "Albert Lea Apartments",
+  "officeAddress": "909 Janson Street Albert Lea, Mn 56007",
+  "officeMapUrl": "https://www.google.com/maps/place/909+Janson+St,+Albert+Lea,+MN+56007/@43.6447338,-93.3802404,786m/data=!3m2!1e3!4b1!4m6!3m5!1s0x87f1365fe640fed3:0xad56489d90717645!8m2!3d43.6447338!4d-93.3802404!16s%2Fg%2F11c18d1hwh?entry=ttu&g_ep=EgoyMDI2MDcwNi4wIKXMDSoASAFQAw%3D%3D",
+  "officePhoneLabel": "Manager Phone: 763-843-0629",
+  "officePhoneNumber": "+17638430629"
 }

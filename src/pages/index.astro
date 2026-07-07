@@ -4,7 +4,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const home = await getEntry('home', 'index');
 if (!home) throw new Error('Missing content/home/index.yaml entry');
-const { heroSlides, aboutHeading, aboutBody, ctaLabel, ctaUrl, officeHeading, officeLines } = home.data;
+const {
+	heroSlides,
+	aboutHeading,
+	aboutBody,
+	ctaLabel,
+	ctaUrl,
+	officeHeading,
+	officeName,
+	officeAddress,
+	officeMapUrl,
+	officePhoneLabel,
+	officePhoneNumber,
+} = home.data;
 
 const schemaGraph = JSON.stringify({
 	"@context": "https://schema.org",
@@ -317,7 +329,9 @@ const schemaGraph = JSON.stringify({
 							</div>
 							<section class="av_textblock_section av-2hej8-73335880b3cf0a5c47548cc6a66ad983" itemscope itemtype="https://schema.org/CreativeWork">
 								<div class="avia_textblock" itemprop="text">
-									{officeLines.map((line: string) => <p style="font-weight: 400;">{line}</p>)}
+									<p style="font-weight: 400;">{officeName}</p>
+									<p style="font-weight: 400;"><a href={officeMapUrl} target="_blank" rel="noopener noreferrer">{officeAddress}</a></p>
+									<p style="font-weight: 400;"><a href={`tel:${officePhoneNumber}`}>{officePhoneLabel}</a></p>
 								</div>
 							</section>
 						</div>
