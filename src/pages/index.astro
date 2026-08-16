@@ -8,6 +8,7 @@ const {
 	heroSlides,
 	aboutHeading,
 	aboutBody,
+	metaDescription,
 	ctaLabel,
 	ctaUrl,
 	officeHeading,
@@ -50,18 +51,36 @@ const schemaGraph = JSON.stringify({
 				"query-input": { "@type": "PropertyValueSpecification", "valueRequired": true, "valueName": "search_term_string" }
 			}],
 			"inLanguage": "en-US"
+		},
+		{
+			"@type": "ApartmentComplex",
+			"@id": "https://www.aleaapts.com/#complex",
+			"name": officeName,
+			"url": "https://www.aleaapts.com/",
+			"telephone": officePhoneNumber,
+			"numberOfAccommodationUnits": 71,
+			"petsAllowed": true,
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "909 Janson Street",
+				"addressLocality": "Albert Lea",
+				"addressRegion": "MN",
+				"postalCode": "56007",
+				"addressCountry": "US"
+			}
 		}
 	]
 });
 ---
 
-<BaseLayout title="Home - Albert Lea Apartments" canonicalPath="/" schemaGraph={schemaGraph}>
+<BaseLayout title="Home - Albert Lea Apartments" canonicalPath="/" description={metaDescription} schemaGraph={schemaGraph}>
 
 	<div id="av_section_1" class="avia-section av-k7xfkp2v-cbedc867cd9b716e2513f42b7fdb4715 main_color avia-section-no-padding avia-no-border-styling container_wrap fullsize">
 		<div class="container av-section-cont-open">
 			<main role="main" itemprop="mainContentOfPage" class="template-page content av-content-full alpha units">
 				<div class="post-entry post-entry-type-page post-entry-20">
 					<div class="entry-content-wrapper clearfix">
+						<h1 class="visually-hidden">Albert Lea Apartments - 1 and 2 Bedroom Apartments for Rent</h1>
 						<div class="avia-slideshow av-k7xfedey-dd8669e0ece056ce670c8ce5c46e4888 avia-slideshow-featured_large av_slideshow avia-slide-slider av-slideshow-ui av-control-hidden av-no-slider-navigation av-hide-nav-arrows av-slideshow-autoplay av-loop-endless av-loop-manual-endless av-default-height-applied avia-slideshow-1"
 							data-slideshow-options='{"animation":"slide","autoplay":true,"loop_autoplay":"endless","interval":6,"loop_manual":"manual-endless","autoplay_stopper":false,"noNavigation":true,"bg_slider":false,"keep_padding":false,"hoverpause":false,"show_slide_delay":0}'
 							itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
@@ -74,7 +93,7 @@ const schemaGraph = JSON.stringify({
 												{heroSlides[0].body && <div class="avia-caption-content" itemprop="description" set:html={`<p>${heroSlides[0].body}</p>`} />}
 											</div>
 										</div>
-										<img decoding="async" fetchpriority="high" class="wp-image-98" src="/assets/images/2024/12/Albert-Lea-Apartments-Complex-05-1500x630.jpg" width="1500" height="630" title="Albert Lea Apartments Complex-05" alt="" itemprop="thumbnailUrl" />
+										<img decoding="async" fetchpriority="high" class="wp-image-98" src="/assets/images/2024/12/Albert-Lea-Apartments-Complex-05-1500x630.jpg" width="1500" height="630" title="Albert Lea Apartments Complex-05" alt="Exterior of an A-Lea Apartments building in Albert Lea, MN" itemprop="thumbnailUrl" />
 									</div>
 								</li>
 								<li class="avia-slideshow-slide av-k7xfedey-dd8669e0ece056ce670c8ce5c46e4888__1 slide-2 slide-even">
@@ -85,7 +104,7 @@ const schemaGraph = JSON.stringify({
 												{heroSlides[1].body && <div class="avia-caption-content" itemprop="description" set:html={`<p>${heroSlides[1].body}</p>`} />}
 											</div>
 										</div>
-										<img decoding="async" fetchpriority="high" class="wp-image-94" src="/assets/images/2024/12/Albert-Lea-Apartments-Complex-01-1500x630.jpg" width="1500" height="630" title="Albert Lea Apartments Complex-01" alt="" itemprop="thumbnailUrl" />
+										<img decoding="async" fetchpriority="high" class="wp-image-94" src="/assets/images/2024/12/Albert-Lea-Apartments-Complex-01-1500x630.jpg" width="1500" height="630" title="Albert Lea Apartments Complex-01" alt="1 and 2 bedroom apartment building with balconies at A-Lea Apartments" itemprop="thumbnailUrl" />
 									</div>
 								</li>
 								<li class="avia-slideshow-slide av-k7xfedey-dd8669e0ece056ce670c8ce5c46e4888__2 slide-3 slide-odd">
@@ -96,7 +115,7 @@ const schemaGraph = JSON.stringify({
 											{heroSlides[2].body && <div class="avia-caption-content" itemprop="description" set:html={`<p>${heroSlides[2].body}</p>`} />}
 											</div>
 										</div>
-										<img decoding="async" fetchpriority="high" class="wp-image-96" src="/assets/images/2024/12/Albert-Lea-Apartments-Complex-03-1500x630.jpg" width="1500" height="630" title="Albert Lea Apartments Complex-03" alt="" itemprop="thumbnailUrl" />
+										<img decoding="async" fetchpriority="high" class="wp-image-96" src="/assets/images/2024/12/Albert-Lea-Apartments-Complex-03-1500x630.jpg" width="1500" height="630" title="Albert Lea Apartments Complex-03" alt="Affordable apartment building exterior at A-Lea Apartments in Albert Lea" itemprop="thumbnailUrl" />
 									</div>
 								</li>
 							</ul>
@@ -149,11 +168,11 @@ const schemaGraph = JSON.stringify({
 								<div class="av-masonry-container isotope av-js-disabled">
 									<div class="av-masonry-entry isotope-item av-masonry-item-no-image"></div>
 									{[
-										{ id: 99, base: 'Albert-Lea-Apartments-Complex-06', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920 },
-										{ id: 98, base: 'Albert-Lea-Apartments-Complex-05', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920 },
-										{ id: 94, base: 'Albert-Lea-Apartments-Complex-01', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920 },
-										{ id: 96, base: 'Albert-Lea-Apartments-Complex-03', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920 },
-										{ id: 95, base: 'Albert-Lea-Apartments-Complex-02', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920 },
+										{ id: 99, base: 'Albert-Lea-Apartments-Complex-06', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920, alt: 'A-Lea Apartments building exterior, view 6' },
+										{ id: 98, base: 'Albert-Lea-Apartments-Complex-05', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920, alt: 'A-Lea Apartments building exterior, view 5' },
+										{ id: 94, base: 'Albert-Lea-Apartments-Complex-01', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920, alt: 'A-Lea Apartments building exterior, view 1' },
+										{ id: 96, base: 'Albert-Lea-Apartments-Complex-03', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920, alt: 'A-Lea Apartments building exterior, view 3' },
+										{ id: 95, base: 'Albert-Lea-Apartments-Complex-02', w: 705, h: 529, aspect: [1030,300,768,1536,1500,705], big: 1920, alt: 'A-Lea Apartments building exterior, view 2' },
 									].map((img) => (
 										<a
 											href={`/assets/images/2024/12/${img.base}-1030x773.jpg`}
@@ -179,7 +198,7 @@ const schemaGraph = JSON.stringify({
 															class={`wp-image-${img.id}`}
 															src={`/assets/images/2024/12/${img.base}-705x529.jpg`}
 															title=""
-															alt=""
+															alt={img.alt}
 															srcset={`/assets/images/2024/12/${img.base}-705x529.jpg 705w, /assets/images/2024/12/${img.base}-300x225.jpg 300w, /assets/images/2024/12/${img.base}-1030x773.jpg 1030w, /assets/images/2024/12/${img.base}-768x576.jpg 768w, /assets/images/2024/12/${img.base}-1536x1153.jpg 1536w, /assets/images/2024/12/${img.base}-1500x1126.jpg 1500w, /assets/images/2024/12/${img.base}.jpg 1920w`}
 															sizes="(max-width: 705px) 100vw, 705px"
 														/>
@@ -189,11 +208,11 @@ const schemaGraph = JSON.stringify({
 										</a>
 									))}
 									{[
-										{ id: 97, base: 'Albert-Lea-Apartments-Complex-04', w: 529, h: 705 },
-										{ id: 101, base: 'Albert-Lea-Apartments-Complex-08', w: 529, h: 705 },
-										{ id: 102, base: 'Albert-Lea-Apartments-Complex-09', w: 529, h: 705 },
-										{ id: 100, base: 'Albert-Lea-Apartments-Complex-07', w: 529, h: 705 },
-										{ id: 103, base: 'Albert-Lea-Apartments-Complex-10', w: 529, h: 705 },
+										{ id: 97, base: 'Albert-Lea-Apartments-Complex-04', w: 529, h: 705, alt: 'A-Lea Apartments building exterior, view 4' },
+										{ id: 101, base: 'Albert-Lea-Apartments-Complex-08', w: 529, h: 705, alt: 'A-Lea Apartments building exterior, view 8' },
+										{ id: 102, base: 'Albert-Lea-Apartments-Complex-09', w: 529, h: 705, alt: 'A-Lea Apartments building exterior, view 9' },
+										{ id: 100, base: 'Albert-Lea-Apartments-Complex-07', w: 529, h: 705, alt: 'A-Lea Apartments building exterior, view 7' },
+										{ id: 103, base: 'Albert-Lea-Apartments-Complex-10', w: 529, h: 705, alt: 'A-Lea Apartments building exterior, view 10' },
 									].map((img) => (
 										<a
 											href={`/assets/images/2024/12/${img.base}-773x1030.jpg`}
@@ -219,7 +238,7 @@ const schemaGraph = JSON.stringify({
 															class={`wp-image-${img.id}`}
 															src={`/assets/images/2024/12/${img.base}-529x705.jpg`}
 															title=""
-															alt=""
+															alt={img.alt}
 															srcset={`/assets/images/2024/12/${img.base}-529x705.jpg 529w, /assets/images/2024/12/${img.base}-225x300.jpg 225w, /assets/images/2024/12/${img.base}-773x1030.jpg 773w, /assets/images/2024/12/${img.base}-768x1023.jpg 768w, /assets/images/2024/12/${img.base}-1153x1536.jpg 1153w, /assets/images/2024/12/${img.base}-1126x1500.jpg 1126w, /assets/images/2024/12/${img.base}.jpg 1441w`}
 															sizes="(max-width: 529px) 100vw, 529px"
 														/>
@@ -229,8 +248,8 @@ const schemaGraph = JSON.stringify({
 										</a>
 									))}
 									{[
-										{ id: 13, base: 'IMG_0117', w: 720, h: 1080, srcw: '683', srch: '1024' },
-										{ id: 12, base: 'IMG_0115', w: 720, h: 1080, srcw: '683', srch: '1024' },
+										{ id: 13, base: 'IMG_0117', w: 720, h: 1080, srcw: '683', srch: '1024', alt: 'Apartment unit interior at A-Lea Apartments' },
+										{ id: 12, base: 'IMG_0115', w: 720, h: 1080, srcw: '683', srch: '1024', alt: 'Apartment unit interior at A-Lea Apartments' },
 									].map((img) => (
 										<a
 											href={`/assets/images/2020/03/${img.base}-683x1024.jpg`}
@@ -256,7 +275,7 @@ const schemaGraph = JSON.stringify({
 															class={`wp-image-${img.id}`}
 															src={`/assets/images/2020/03/${img.base}.jpg`}
 															title=""
-															alt=""
+															alt={img.alt}
 															srcset={`/assets/images/2020/03/${img.base}.jpg 720w, /assets/images/2020/03/${img.base}-200x300.jpg 200w, /assets/images/2020/03/${img.base}-683x1024.jpg 683w`}
 															sizes="(max-width: 720px) 100vw, 720px"
 														/>
@@ -281,7 +300,7 @@ const schemaGraph = JSON.stringify({
 										<figure class="av-inner-masonry main_color">
 											<div class="av-masonry-outerimage-container">
 												<div class="av-masonry-image-container">
-													<img decoding="async" width="1620" height="1080" fetchpriority="high" class="wp-image-11" src="/assets/images/2020/03/IMG_0114.jpg" title="" alt="" srcset="/assets/images/2020/03/IMG_0114.jpg 1620w, /assets/images/2020/03/IMG_0114-300x200.jpg 300w, /assets/images/2020/03/IMG_0114-1024x683.jpg 1024w, /assets/images/2020/03/IMG_0114-768x512.jpg 768w, /assets/images/2020/03/IMG_0114-1536x1024.jpg 1536w, /assets/images/2020/03/IMG_0114-1200x800.jpg 1200w" sizes="(max-width: 1620px) 100vw, 1620px" />
+													<img decoding="async" width="1620" height="1080" fetchpriority="high" class="wp-image-11" src="/assets/images/2020/03/IMG_0114.jpg" title="" alt="Apartment unit interior at A-Lea Apartments" srcset="/assets/images/2020/03/IMG_0114.jpg 1620w, /assets/images/2020/03/IMG_0114-300x200.jpg 300w, /assets/images/2020/03/IMG_0114-1024x683.jpg 1024w, /assets/images/2020/03/IMG_0114-768x512.jpg 768w, /assets/images/2020/03/IMG_0114-1536x1024.jpg 1536w, /assets/images/2020/03/IMG_0114-1200x800.jpg 1200w" sizes="(max-width: 1620px) 100vw, 1620px" />
 												</div>
 											</div>
 										</figure>
@@ -302,7 +321,7 @@ const schemaGraph = JSON.stringify({
 										<figure class="av-inner-masonry main_color">
 											<div class="av-masonry-outerimage-container">
 												<div class="av-masonry-image-container">
-													<img decoding="async" width="1620" height="1080" fetchpriority="high" class="wp-image-10" src="/assets/images/2020/03/IMG_0112.jpg" title="" alt="" srcset="/assets/images/2020/03/IMG_0112.jpg 1620w, /assets/images/2020/03/IMG_0112-300x200.jpg 300w, /assets/images/2020/03/IMG_0112-1024x683.jpg 1024w, /assets/images/2020/03/IMG_0112-768x512.jpg 768w, /assets/images/2020/03/IMG_0112-1536x1024.jpg 1536w, /assets/images/2020/03/IMG_0112-1200x800.jpg 1200w" sizes="(max-width: 1620px) 100vw, 1620px" />
+													<img decoding="async" width="1620" height="1080" fetchpriority="high" class="wp-image-10" src="/assets/images/2020/03/IMG_0112.jpg" title="" alt="Apartment unit interior at A-Lea Apartments" srcset="/assets/images/2020/03/IMG_0112.jpg 1620w, /assets/images/2020/03/IMG_0112-300x200.jpg 300w, /assets/images/2020/03/IMG_0112-1024x683.jpg 1024w, /assets/images/2020/03/IMG_0112-768x512.jpg 768w, /assets/images/2020/03/IMG_0112-1536x1024.jpg 1536w, /assets/images/2020/03/IMG_0112-1200x800.jpg 1200w" sizes="(max-width: 1620px) 100vw, 1620px" />
 												</div>
 											</div>
 										</figure>

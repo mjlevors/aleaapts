@@ -12,6 +12,7 @@ const home = defineCollection({
 		),
 		aboutHeading: z.string(),
 		aboutBody: z.string(),
+		metaDescription: z.string(),
 		ctaLabel: z.string(),
 		ctaUrl: z.string(),
 		officeHeading: z.string(),

@@ -51,12 +51,24 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 	<script id="jquery-core-js" is:inline src="/assets/vendor/jquery/jquery.min.js?ver=3.7.1" type="text/javascript"></script>
 	<script id="jquery-migrate-js" is:inline src="/assets/vendor/jquery/jquery-migrate.min.js?ver=3.4.1" type="text/javascript"></script>
 
-	<script type="text/partytown" is:inline src="https://www.googletagmanager.com/gtag/js?id=G-ZYVCXMV4ZN"></script>
-	<script type="text/partytown" is:inline>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'G-ZYVCXMV4ZN');
+	<script is:inline>
+		(function () {
+			function loadAnalytics() {
+				var s1 = document.createElement('script');
+				s1.type = 'text/partytown';
+				s1.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZYVCXMV4ZN';
+				document.head.appendChild(s1);
+				var s2 = document.createElement('script');
+				s2.type = 'text/partytown';
+				s2.text = "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYVCXMV4ZN');";
+				document.head.appendChild(s2);
+			}
+			if ('requestIdleCallback' in window) {
+				requestIdleCallback(loadAnalytics, { timeout: 4000 });
+			} else {
+				setTimeout(loadAnalytics, 1500);
+			}
+		})();
 	</script>
 
 	<script id="avia-head-scripts-js" is:inline src="/assets/theme/avia-head-scripts.js" type="text/javascript"></script>
@@ -66,7 +78,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 		else{document.documentElement.className+=' avia_desktop '};document.documentElement.className+=' js_active ';(function(){var e=['-webkit-','-moz-','-ms-',''],n='',o=!1,a=!1;for(var t in e){if(e[t]+'transform' in document.documentElement.style){o=!0;n=e[t]+'transform'};if(e[t]+'perspective' in document.documentElement.style){a=!0}};if(o){document.documentElement.className+=' avia_transform '};if(a){document.documentElement.className+=' avia_transform3d '};if(typeof document.getElementsByClassName=='function'&&typeof document.documentElement.getBoundingClientRect=='function'&&avia_is_mobile==!1){if(n&&window.innerHeight>0){setTimeout(function(){var e=0,o={},a=0,t=document.getElementsByClassName('av-parallax'),i=window.pageYOffset||document.documentElement.scrollTop;for(e=0;e<t.length;e++){t[e].style.top='0px';o=t[e].getBoundingClientRect();a=Math.ceil((window.innerHeight+i-o.top)*0.3);t[e].style[n]='translate(0px, '+a+'px)';t[e].style.top='auto';t[e].className+=' enabled-parallax '}},50)}}})();
 	</script>
 	<style type="text/css">
-		@font-face {font-family: 'entypo-fontello-enfold'; font-weight: normal; font-style: normal; font-display: auto;
+		@font-face {font-family: 'entypo-fontello-enfold'; font-weight: normal; font-style: normal; font-display: swap;
 		src: url('/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.woff2') format('woff2'),
 		url('/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.woff') format('woff'),
 		url('/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.ttf') format('truetype'),
